@@ -1,0 +1,21 @@
+
+.docusaurus-highlight-code-line {
+  background-color: rgba(0, 0, 0, 0.1);
+  display: block;
+  margin: 0 calc(-1 * var(--ifm-pre-padding));
+  padding: 0 var(--ifm-pre-padding);
+}
+
+[data-theme='dark'] .docusaurus-highlight-code-line {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+code {
+  font-size: 0.85rem;
+  padding-inline: 0.25rem;
+  font-weight: 600;
+}
+
+p code {
+  margin-inline: 0.15rem;
+}

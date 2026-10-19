@@ -1,0 +1,121 @@
+@use '../../abstracts/palettes' as p;
+
+article[itemprop="blogPost"] {
+  background: white;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  @media (min-width: 600px) {
+    padding: 2rem;
+  }
+  margin-bottom: 2rem !important;
+  box-shadow: 0 5px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+
+  header {
+    position: relative;
+  }
+}
+
+[data-theme='dark'] article[itemprop="blogPost"] {
+  background: p.$white-8;
+}
+
+article[itemprop="blogPost"] {
+  header {
+    h1, h2 {
+      font-size: 1.5rem;
+      font-weight: 500;
+      @media (min-width: 996px) {
+        padding-right: 14rem;
+      }
+    }
+
+    [class*="blogPostData"] {
+      color: p.$avo-green;
+      margin-block: 0.25rem !important;
+      font-weight: 700;
+
+      time {
+        color: var(--opacity-36);
+        font-weight: 500;
+
+      }
+    }
+
+    .avatar {
+      margin-bottom: 1rem !important;
+
+      .avatar__intro, .avatar__name {
+        font-weight: 500;
+      }
+
+      @media (min-width: 996px) {
+        margin-bottom: 0 !important;
+      }
+    }
+  }
+
+  // body
+
+  [itemprop="articleBody"] {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  // footer
+
+  footer {
+    gap: 1.5rem;
+    justify-content: space-between;
+
+    .col {
+      width: auto;
+
+      > b {
+        display: none;
+      }
+
+      [class*="tag"] {
+        transition: all 0.2s ease;
+      }
+
+      [class*="tag"]:not(:hover) {
+        color: var(--opacity-60);
+        --docusaurus-tag-list-border: var(--opacity-36);
+      }
+    }
+
+    ul.margin-left--sm {
+      margin-left: 0 !important;
+    }
+
+    .col[class*='col--'] {
+      flex: none;
+      max-width: inherit;
+    }
+
+    .text--right {
+      a {
+        padding: 0.4rem 0.6rem;
+        border-radius: 4px;
+        color: p.$avo-green;
+        transition: background-color 0.2s ease;
+
+        &:hover {
+          background: p.$avo-green-16;
+        }
+      }
+    }
+  }
+}
+
+
+nav.pagination-nav {
+  .pagination-nav__link {
+    border: none;
+    padding: 0;
+  }
+
+  .pagination-nav__sublabel {
+    opacity: 0.5;
+  }
+}

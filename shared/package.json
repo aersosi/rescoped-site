@@ -1,0 +1,19 @@
+{
+  "name": "rescoped Libs",
+  "title": "Hello2000",
+  "version": "1.0.0",
+  "description": "Basic packages",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Virtual",
+    "Monorepo",
+    "Typescript",
+    "Angular",
+    "Datagrid"
+  ],
+  "author": "Serkan Sipahi",
+  "license": "ISC"
+}

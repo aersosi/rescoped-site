@@ -1,0 +1,16 @@
+{
+  "name": "avo-libs",
+  "version": "1.0.0",
+  "description": "This package is to be installed and shared as local dependency",
+  "keywords": [
+    "recoped",
+    "hyper",
+    "super",
+    "arthur"
+  ],
+  "author": "Arthur Ersosi",
+  "license": "MIT",
+  "files": [
+    "_index.scss"
+  ]
+}

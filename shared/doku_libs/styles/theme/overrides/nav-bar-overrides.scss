@@ -1,0 +1,10 @@
+.dropdown > .navbar__link:after {
+  margin-left: 0.5em;
+}
+
+.navbar__items {
+  @media (max-width: 996px) {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+}

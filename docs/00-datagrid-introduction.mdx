@@ -1,0 +1,222 @@
+---
+slug: /datagrid/datagrid-introduction
+sidebar_label: Datagrid Introduction
+---
+
+import CommunitySection from './_community-section.md';
+import Obfuscate from 'react-obfuscate';
+
+# Datagrid Introduction
+
+:::info
+This project is in **developer-preview** status and will reach the **beta in 2023 Q1**.
+Currently, the **datagrid** is under massive refactoring, and it is not recommended using it in production.
+Rather, we kindly appreciate your feedback on [GitHub Issues](https://github.com/avodaq/rescoped/issues).
+:::
+
+<br/>
+
+## What is rescoped datagrid?
+
+Our datagrid is a library for building powerful interactive datagrids in the Angular-Material ecosystem.
+
+<br/>
+
+## The idea behind the rescoped datagrid
+
+**We don't just say, "Let’s make good even better", we mean it!**
+
+So maybe that's why the **rescoped datagrid** is based on the well established **Angular Material Table**.
+We decided to extend the `<mat-table>` component with **directives** and **child-components** to make it
+a full-featured data grid. This also allows the best possible compatibility with Angular and a quick and easy
+start for all developers. To create the **datagrid**, we provide three components
+(**`mat-datagrid-input`**, **`mat-datagrid-combobox`** or **`mat-datagrid-datepicker`**),
+each of which is rendered into the **datagrid** cells and is controlled by **predefined rules**.
+We'll cover the individual **rules**, **components** and **directives** later, but first, let's talk about our core concepts.
+
+<br/>
+
+## Core concepts
+
+There is nothing special about the **rescoped datagrid**. We simply create a `<mat-table>` component,
+and just like in any other **datagrid**, we need to **fill in data**. The real power is that you can
+predefine **individual rules** for **rows**, **columns** or specific **cells**, to control, how and what
+will be rendered into the **datagrid**. These rules can be set **globally**, **vertically**, **horizontally**
+or very **specific**. This means you can set rules for:
+
+<ol>
+  <li>1. The <b>entire table</b></li>
+  <li>2. <b>All rows</b> or <b>specific rows</b></li>
+  <li>3. <b>All columns</b> or <b>specific columns</b></li>
+  <li>4. <b>All cells</b> or <b>specific cells</b></li>
+</ol>
+<br/>
+
+Imagine you set the rules from global to atomic, from unspecific to specific.
+Rules that are more specific override rules that are less specific. For example,
+you can set a rule for the whole **datagrid** and create exceptions for individual rows,
+columns or cells. This makes the **rescoped datagrid** a very powerful tool and gives you maximum control.
+
+<br/>
+
+## Rules
+
+Currently, there are five different types of rules: `placeholder`, `validate`, `disable`, `render` and `action`**.**
+
+### placeholder
+
+Behaves like the `placeholder` in a standard `<input/>`. Pass a value to render a `placeholder` until you click inside the cell.
+
+### validate
+
+Turn a validation on/off for the entire **datagrid**, rows, columns or individual cells.
+
+### disable
+
+If set to `true`, no `<input/>` but a `string` will be rendered into this cell.
+
+### render
+
+If set to `false`, the entered data will be saved in the background, but will not be visible in this cell after confirming with enter.
+
+### action
+
+Add `componentType` (e.g. `<mat-button/>`), `componentPosition` (`before`, `after` or `override`), `condition` and `data` to render a specific component into this cell.
+
+These are the data types that the Rules will take.
+
+```tsx
+interface RuleTypes {
+  placeholder?: string;
+  validate?: boolean;
+  disable?: boolean;
+  render?: boolean;
+  action?: {
+    componentType?: ComponentType<unknown>;
+    componentPosition?: 'before' | 'after' | 'override';
+    cond?: boolean | (() => boolean);
+    data?: unknown;
+  };
+}
+```
+
+<br/>
+
+## Data Model
+
+To populate the **datagrid**, we use the `setItemPayload` function to create a multidimensional JS object,
+that holds not only the **data** itself, but also **metadata** that defines what `actionType`
+(`global-row`, `group-row` or `single-row`) it is, or `groupId` it has. This is the **data model** and is
+only visible internally. **The data model has the highest specificity and overwrites all previously set rules!**
+
+<br/>
+
+## Low level interaction
+
+By default, we provide an input field (**`mat-datagrid-input`**), a date field (**`mat-datagrid-datepicker`**) or a
+combobox (**`mat-datagrid-combobox`**) that can be rendered into the individual cells. In the future, we plan to
+add other useful inputs, such as a `mat-star-rating` component. But for now, you can create and add any component
+you can think of to the **datagrid** via the `action` rule.
+
+### mat-datagrid-input
+
+For simple data input like `strings` and `numbers`
+
+### mat-datagrid-combobox
+
+Just like a dropdown to select data from a predefined list, but with a **built-in search** field.
+
+### mat-datagrid-datpicker
+
+A wrapper for the mat-datepicker that streamlines the configuration and makes the markup nice.
+
+<br/>
+
+
+## High level interaction
+
+You can not only make the **datagrid** interactive by rendering `inputs` into each cell, you can also **group rows together**
+or **batch input** data into each cell of a specific column. Again, you can think here in the horizontal and the vertical.
+
+### Global-row
+
+One row that sits on top of your table. Type in a `string` (or perform an action) into a cell to apply it on each cell in
+this specific column.
+
+### Group-row
+
+Each `group-row` sits on top of a group of `single-rows`. Type in a `string` (or perform an action) to apply it to each cell
+within this group, in this specific column. You can also **open and close** groups similar to an accordion component, when implemented.
+
+### Single-row
+
+This is the simplest type of row. It holds and displays its cells’ data. Type in a `string` (or perform an action).
+
+
+:::info
+
+For the future, `search-replace` and `filter` are two more row types, to further improve the interaction with the **datagrid**.
+We are planning these features for the **beta launch 2023 Q1!**
+:::
+
+<br/>
+
+## Validation
+
+The **datagrid** validation works exactly as you already know it from **Angular Forms**.
+But on top we have extended Angular Form Validators, so you can be very specific by passing a
+`validationMessage`, `validationCode` and a `validationType` to the `validation` rule.
+We recommend **defining only one validation rule per column** in your Markup.
+
+The `interface` for each column looks like this:
+
+```tsx
+interface DatagridValidation {
+	validator?: ValidatorFn[];
+  asyncValidator?: AsyncValidatorFn[];
+  updateOn?: AbstractControlOptions['updateOn'];
+};
+```
+
+<br/>
+
+## Skygrid showcase app
+
+:::tip
+Skygrid is a demo app we have built for you to explain the datagrid implementation and functions using
+functions. Find the demo here [skygrid demo app](https://rescoped.io/skygrid-app/), read the guide here [installation & setup](../datagrid-installation-setup).
+:::
+
+<br/>
+
+## Contribution
+
+Because we are still in alpha, we need you! You can help us by contributing to our documentation, improving the datagrid
+codebase or something we didn't even think about yet.
+
+Contact us via <Obfuscate linkText="e-mail" email="hello@aersosi.com" />, [GitHub](https://github.com/aersosi/rescoped-site), whatever you prefer. :)
+
+Let's build together the tools that you want.
+
+<br/>
+
+## Community
+
+[//]: # (### GitHub Discussions)
+
+[//]: # ()
+[//]: # (Explore [existing discussions]&#40;https://github.com/aersosi/rescoped-site/discussions&#41; or start a new one.)
+
+### Bug report
+
+Please open a [bug report ticket](https://github.com/aersosi/rescoped-site/issues/new?assignees=&labels=&template=bug_report.md&title=[BUG]) on GitHub.
+
+### Feature request
+
+Please file a [feature request](https://github.com/aersosi/rescoped-site/issues/new?assignees=&labels=&template=feature_request.md&title=[Feature]) issue on GitHub.
+
+### Blog
+
+Read our [news](/news) for the latest updates and annoucements or follow our Twitter account [@rescoped_io](https://twitter.com/rescoped_io)
+
+

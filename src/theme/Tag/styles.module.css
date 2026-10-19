@@ -1,0 +1,50 @@
+:root {
+  --docusaurus-tag-list-border: var(--opacity-36);
+}
+
+[class*="TagsListByLetter"] {
+  margin: 1rem 0.6rem 0 0 !important;
+}
+
+.tag {
+  border: 1px solid var(--docusaurus-tag-list-border);
+  border-radius: 0.5rem;
+  transition: all var(--ifm-transition-fast);
+  font-weight: 500;
+}
+
+.tag:hover {
+  --docusaurus-tag-list-border: var(--ifm-link-color);
+  text-decoration: none;
+}
+
+.tagRegular {
+  border-radius: 0.5rem;
+  padding: 0.3rem 0.5rem;
+  font-size: 90%;
+}
+
+.tagWithCount {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 0.3rem 0.5rem;
+}
+
+.tagWithCount span {
+  border: 1px solid var(--opacity-60);
+  color: var(--opacity-60);
+  font-weight: 700;
+  font-size: 0.875rem;
+  line-height: 1.2;
+  border-radius: 666px;
+  padding: 0.1rem 0.4rem 0.075rem 0.4rem;
+  margin-left: 0.3rem;
+  transition: all var(--ifm-transition-fast);
+}
+
+.tagWithCount:hover span {
+  border: 1px solid var(--ifm-link-color);
+  color: var(--ifm-link-color);
+}
+

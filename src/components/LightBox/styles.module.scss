@@ -1,0 +1,35 @@
+.darkBG {
+  background-color: rgba(0, 0, 0, 0.75);
+  width: 100vw;
+  height: 100vh;
+  z-index: 499;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: fixed;
+}
+
+.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  inset: 1rem;
+  z-index: 500;
+  pointer-events: none;
+}
+
+.closeBtn {
+  color: white;
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  background: rgba(255, 255, 255, 0.5);
+  padding: 1.5rem;
+  border-radius: 666rem;
+  z-index: 500;
+  &:hover {
+    background: rgba(255, 255, 255, 0.75);
+  }
+}
+

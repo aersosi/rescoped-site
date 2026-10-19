@@ -1,0 +1,81 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "strict": true,
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "lib": ["es2019", "dom"],
+    "typeRoots": ["node_modules/@types"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "stripInternal": true,
+    "baseUrl": "./",
+    "paths": {
+      "@avo/components/*": ["libs/components/*"],
+      "@avo/directives/*": ["libs/directives/*"],
+      "@avo/features/authentication/data-access": [
+        "libs/features/authentication/data-access/src/index.ts"
+      ],
+      "@avo/features/authentication/middlewares": [
+        "libs/features/authentication/middleware/src/index.ts"
+      ],
+      "@avo/features/authentication/models": ["libs/features/authentication/models/src/index.ts"],
+      "@avo/features/authentication/page-login": [
+        "libs/features/authentication/page-login/src/index.ts"
+      ],
+      "@avo/features/authentication/shell-web": [
+        "libs/features/authentication/shell-web/src/index.ts"
+      ],
+      "@avo/features/authentication/state": ["libs/features/authentication/state/src/index.ts"],
+      "@avo/features/device-list/data-access": [
+        "libs/features/device-list/data-access/src/index.ts"
+      ],
+      "@avo/features/device-list/guards": ["libs/features/device-list/guards/src/index.ts"],
+      "@avo/features/device-list/menu-branding": [
+        "libs/features/device-list/menu-branding/src/index.ts"
+      ],
+      "@avo/features/device-list/menu-nav": ["libs/features/device-list/menu-nav/src/index.ts"],
+      "@avo/features/device-list/menu-settings": [
+        "libs/features/device-list/menu-settings/src/index.ts"
+      ],
+      "@avo/features/device-list/menu-user": ["libs/features/device-list/menu-user/src/index.ts"],
+      "@avo/features/device-list/page-edit": ["libs/features/device-list/page-edit/src/index.ts"],
+      "@avo/features/device-list/page-search": [
+        "libs/features/device-list/page-search/src/index.ts"
+      ],
+      "@avo/features/device-list/page-select": [
+        "libs/features/device-list/page-select/src/index.ts"
+      ],
+      "@avo/features/device-list/shell-web": ["libs/features/device-list/shell-web/src/index.ts"],
+      "@avo/features/device-list/state": ["libs/features/device-list/state/src/index.ts"],
+      "@avo/features/device-list/ui-sidebar": ["libs/features/device-list/ui-sidebar/src/index.ts"],
+      "@avo/features/device-list/util": ["libs/features/device-list/utils/src/index.ts"],
+      "@avo/features/errors/page-not-found": ["libs/features/errors/page-not-found/src/index.ts"],
+      "@avo/forms/validators": ["libs/forms/context-input-validator/src/index.ts"],
+      "@avo/ngrx/entity": ["libs/ngrx/entity/src/index.ts"],
+      "@avo/provider": ["libs/provider/src/index.ts"],
+      "@avo/rxjs/operators": ["libs/rxjs/operators/src/index.ts"],
+      "@avo/services/*": ["libs/services/*"],
+      "@avo/tests/debug": ["libs/tests/debug/src/index.ts"],
+      "@avo/tests/util": ["libs/tests/util/src/index.ts"],
+      "@avo/utils": ["libs/utils/src/index.ts"]
+    }
+  },
+  "angularCompilerOptions": {
+    "strictInjectionParameters": true,
+    "strictInputAccessModifiers": true,
+    "strictTemplates": true,
+    "strictNullInputTypes": false,
+    "preserveSymlinks": true
+  },
+  "exclude": ["node_modules", "tmp"]
+}

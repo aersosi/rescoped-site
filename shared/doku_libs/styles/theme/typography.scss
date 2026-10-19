@@ -1,0 +1,90 @@
+// todo: improve typography to fluid typography
+
+//12-72px
+//:root {
+//  --fs-xs: clamp(0.75rem, calc(0.71rem + 0.10vw), 0.88rem);
+//  --fs-sm: clamp(0.88rem, calc(0.83rem + 0.10vw), 1.00rem);
+//  --fs-base: clamp(1.00rem, calc(0.96rem + 0.10vw), 1.13rem);
+//  --fs-md: clamp(1.13rem, calc(1.04rem + 0.21vw), 1.38rem);
+//  --fs-lg: clamp(1.38rem, calc(1.29rem + 0.21vw), 1.63rem);
+//  --fs-xl: clamp(1.63rem, calc(1.50rem + 0.31vw), 2.00rem);
+//  --fs-2xl: clamp(2.00rem, calc(1.88rem + 0.31vw), 2.38rem);
+//  --fs-3xl: clamp(2.38rem, calc(2.25rem + 0.31vw), 2.75rem);
+//  --fs-4xl: clamp(2.75rem, calc(2.58rem + 0.42vw), 3.25rem);
+//  --fs-5xl: clamp(3.25rem, calc(3.04rem + 0.52vw), 3.88rem);
+//  --fs-6xl: clamp(3.88rem, calc(3.67rem + 0.52vw), 4.50rem);
+//  --fs-7xl: clamp(4.50rem, calc(4.25rem + 0.63vw), 5.25rem);
+//}
+
+// 12-96px
+:root {
+  --fs-xs: clamp(0.75rem, calc(0.71rem + 0.10vw), 0.88rem);
+  --fs-sm: clamp(0.88rem, calc(0.83rem + 0.10vw), 1.00rem);
+  --fs-base: clamp(1.00rem, calc(0.92rem + 0.21vw), 1.25rem);
+  --fs-md: clamp(1.25rem, calc(1.13rem + 0.31vw), 1.63rem);
+  --fs-lg: clamp(1.63rem, calc(1.50rem + 0.31vw), 2.00rem);
+  --fs-xl: clamp(2.00rem, calc(1.88rem + 0.31vw), 2.38rem);
+  --fs-2xl: clamp(2.38rem, calc(2.21rem + 0.42vw), 2.88rem);
+  --fs-3xl: clamp(2.88rem, calc(2.67rem + 0.52vw), 3.50rem);
+  --fs-4xl: clamp(3.50rem, calc(3.25rem + 0.63vw), 4.25rem);
+  --fs-5xl: clamp(4.25rem, calc(4.00rem + 0.63vw), 5.00rem);
+  --fs-6xl: clamp(5.00rem, calc(4.67rem + 0.83vw), 6.00rem);
+  --fs-7xl: clamp(6.00rem, calc(5.58rem + 1.04vw), 7.25rem);
+  --ifm-breadcrumb-size-multiplier: 13;
+}
+
+.blog-post-page {
+  // no clue why font-size not workig on blog-post-page
+}
+
+.breadcrumbs__link {
+  font-size: var(--fs-sm);
+}
+
+.docs-doc-page {
+  .main-wrapper nav,
+  .main-wrapper .table-of-contents {
+    font-size: var(--fs-sm);
+    font-weight: 500;
+  }
+
+  main div[class*="docItemCol"] {
+    h1 {
+      font-size: calc(var(--fs-3xl) * 0.75);
+    }
+
+    h2 {
+      font-size: calc(var(--fs-2xl) * 0.8);
+    }
+
+    h3 {
+      font-size: calc(var(--fs-xl) * 0.85);
+    }
+
+    h4 {
+      font-size: calc(var(--fs-lg) * 0.9);
+    }
+
+    h5 {
+      font-size: calc(var(--fs-md) * 0.95);
+    }
+
+    h6 {
+      font-size: var(--fs-base);
+    }
+
+    p, a, ul, li {
+      font-size: calc(var(--fs-md) * 0.95);
+      @media (min-width: 996px) {
+        font-size: var(--fs-base);
+      }
+    }
+
+    small {
+      font-size: var(--fs-base);
+      @media (min-width: 996px) {
+        font-size: var(--fs-sm);
+      }
+    }
+  }
+}

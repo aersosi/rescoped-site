@@ -1,0 +1,303 @@
+---
+slug: /contribution
+sidebar_label: Contribution
+---
+
+# Contribution
+
+## How to Contribute
+
+With rescoped we want to actively participate in pushing the open source movement forward.
+
+To achieve this, we are building a community of passionated contributors and users, and we'd love to have you join us.
+
+The rescoped ecosystem only grows through the contributions of all the helping hands. Thank you for your enthusiasm
+and your work — we appreciate everything that you do!
+
+We are still in the early days of the rescoped project and try to make contributing to this project as easy as possible,
+but we’re not quite there yet. Hopefully this document makes the process for contributing clear and answers some
+questions that you may have.
+
+<br/>
+
+:::info Tip for new contributors
+Take a look at the [GitHub guide](https://github.com/firstcontributions/first-contributions) for first contributors,
+for a helpful guide on making your first contribution.
+:::
+
+<br/>
+
+### Code of Conduct
+
+Rescoped is using the [Contributor Covenant](https://www.contributor-covenant.org/) as its Code of Conduct, and we
+expect everyone working on this project to respect it. Please read the [full text](/code-of-conduct), so you
+can understand which actions are inappropriate.
+
+<br/>
+
+### Open Development
+
+All work on rescoped takes place directly on [GitHub](http://github.com/avodaq/rescoped). Pull requests sent by core
+team members and external contributors go through the same review process.
+
+If you would like to take part in rescoped, there are many different ways in which you can contribute. The following
+are just a few ways in which you can help:
+
+ • [Contribute to Code](https://github.com/avodaq/rescoped/contribution/blob/main/contribute-code.md)
+
+ • [Contribute to Docs](https://github.com/avodaq/rescoped/contribution/blob/main/contribute-docs.md)
+
+ • Answer questions posted on [Stackoverflow](http://stackoverflow.com/) or join our
+[Discord Community](http://discord.com/rescoped)
+
+ • [Report and Investigate Bugs](https://github.com/avodaq/rescoped/issues/new?assignees=&labels=&template=bug_report.md&title=%5BBUG%5D)
+
+ • Submit a [Feature Request](https://github.com/avodaq/rescoped/issues/new?assignees=&labels=&template=feature_request.md&title=%5BFeature_Request%5D)
+
+<br/>
+
+### Semantic Versioning
+
+We follow [semantic versioning](https://semver.org/). We release patch versions for critical bugfixes, minor
+versions for new features or non-essential changes, and major versions for any breaking changes. When we make
+breaking changes, we also introduce deprecation warnings in a minor version, so that our users learn about the
+upcoming changes and migrate their code in advance.
+
+Every significant change is documented in the [changelog file](http://github.com/avodaq/rescoped/changelog.md).
+
+<br/>
+
+## Contribute to the rescoped code
+
+Contribute a new feature or bug fix to [rescoped's monorepo](https://github.com/avodaq/rescoped).
+This page shows you, how to to set up your environment to start contributing code.
+
+<br/>
+
+### The Monorepo
+
+What is a monorepo?
+
+A monorepo is a single Git repository, that holds your code for multiple applications and packages,
+along with the tooling for them.
+
+<br/>
+
+### Coding Rules
+
+We follow the official Google [TypeScript Style Guide](https://google.github.io/styleguide/tsguide.html)
+
+<br/>
+
+### Submitting a Pull Request
+
+Before you submit your Pull Request consider the following guidelines:
+
+ 1. Search [GitHub](https://github.com/avodaq/rescoped/pulls) for an open or closed Pull Request that relates to your
+submission. You don't want to duplicate existing efforts.
+
+ 2. Make sure that an issue describes the problem you want to fix or provides documentation of the design
+for the feature you want to add.
+
+ 3. [Fork](https://github.com/avodaq/rescoped/fork) the rescoped monorepo.
+
+ 4. Make your changes in a new Git branch within your forked repository:
+
+`git checkout -b my-fix-branch main`
+
+ 5. Create your patch, including appropriate test cases.
+
+ 6. Run the tests for the monorepo make sure that all tests pass.
+
+ 7. Commit your changes using a descriptive commit message that follows our commit message conventions
+[link to Headline](#commit-message-conventions). Following these conventions is necessary because release
+notes are automatically generated from these messages.
+
+`git commit --all`
+
+Note: the optional commit `-a` command line option will automatically "add" and "rm" edited files.
+
+ 8. Push your branch to GitHub:
+
+`git push origin my-fix-branch`
+
+ 9. In GitHub, send a pull request to `rescoped:main`.
+
+<br/>
+
+### Reviewing a Pull Request
+
+The rescoped core team reserves the right to reject pull requests from community members if they violate
+our [Code of Conduct.](/code-of-conduct)
+
+#### Addressing review feedback
+
+If we ask for changes via code reviews then:
+
+ 1. Make the required updates to the code.
+
+ 2. Re-run the rescoped test suites to ensure tests are still passing.
+
+ 3. Create a fixup commit and push to your GitHub repository (this will update your Pull Request):
+
+`git commit --all --fixup HEAD git push`
+
+<br/>
+
+**That's it! Thank you for your contribution! 😊 **
+
+<br/>
+
+### Updating the commit message
+
+A reviewer may suggest changes to a commit message (e.g. to add more context to a change or to stay within our
+commit message guidelines). In order to update the commit message of the last commit in your branch:
+
+ 1. Check out your branch:
+
+`git checkout my-fix-branch`
+
+ 2. Change the last commit and modify the commit message:
+
+`git commit --amend`
+
+ 3. Push to your GitHub repository:
+
+`git push --force-with-lease`
+
+:::info Tip
+If you need to update the commit message of an earlier commit, you can use Git rebase in interactive mode. See
+the [git docs](https://git-scm.com/book/en/v2/Git-Tools-Rewriting-History) for more details.
+:::
+
+<br/>
+
+### After your pull request is merged
+
+After your pull request is merged, you can safely delete your branch and pull the changes from the main (upstream) repository:
+
+ 1. Delete the remote branch on GitHub either through the GitHub web UI or your local shell as follows:
+
+`git push origin --delete my-fix-branch`
+
+ 2. Check out the main branch:
+
+`git checkout main -f`
+
+ 3. Delete the local branch:
+
+`git branch -D my-fix-branch`
+
+ 4. Update your local`main`with the latest upstream version:
+
+`git pull --ff upstream main`
+
+<br/>
+
+### Commit message conventions
+
+**[Init]** Initial Commit; no issue number or subject needed.
+
+**[Bug]** Bug fix for the user; no fix to the build environment.
+
+**[Feature]** New feature for the user; no feature for build script/environment.
+
+**[Improvement]** Improve code not relevant to the user or improve code performance/quality.
+
+**[Security]** Security fix for the user; no fix to the build environment.
+
+**[Test]** Add missing tests, refactoring tests; no production code change.
+
+**[Cleanup]** Refactoring missing semicolons, deleting empty lines, etc.; no production code change.
+
+**[Update]** Update packages/dependencies.
+
+**[Chore]** Changes related to the build system; no production code change.
+
+**[Docs]** Changes to the documentation.
+
+<br/>
+
+### Development
+
+A high level overview of tools used:
+
+ •  [TypeScript](https://www.typescriptlang.org) as the development language
+
+ •  [Angular](https://angular.io) as frontend framework
+
+ •  [Angular material](https://material.angular.io) as implemented design system
+
+ •  [Storybook](https://storybook.js.org) for developing UI Components and Systems
+
+ •  [Prettier](https://prettier.io) for code formatting
+
+ •  [ESLint](https://eslint.org) for linting
+
+ •  [NX](https://nx.dev) as build system
+
+ •  [Material Design](http://m2.material.io) as design system
+
+ •  [Jest](https://jestjs.io) for testing
+
+<br/>
+
+## Contribute to the rescoped docs
+
+Help us make [rescoped.io/docs](https://rescoped.io/docs) as precise and easy-to-use as possible. Contributing to
+documentation is a great way to get involved with open source development, without having to code.
+
+<br/>
+
+### How to Contribute
+
+Anyone can contribute to the rescoped documentation! You can create a merge request for documentation when:
+
+ • You find errors or other room for improvement in existing documentation.
+
+ • You have an idea for all-new documentation that would help a GitHub user or administrator to accomplish their work.
+
+<br/>
+
+If you're updating documentation as part of developing code, go to the
+[Contributing to Code](https://github.com/avodaq/rescoped/contribution/blob/main/contribute-code.md) page.
+
+If you don't find an issue you'd like to work on, you can still open merge requests.
+
+ • Select Edit at the bottom of any page on [rescoped.io/docs](http://rescoped.io/docs)
+
+ • Or just look through pages in the `/docs` [directory](https://github.com/avodaq/rescoped/docs) until you find
+one you'd like to improve.
+
+<br/>
+
+### Is it rescoped, Rescoped or RESCOPED?
+
+Use the lower case version of “rescoped” everywhere when referrering to the rescoped project.
+
+<br/>
+
+### Title capitalization
+
+For titles use "Sentence case capitalization". In technical documentation, sentence case capitalization
+makes it easier to read.
+
+<br/>
+
+### Spelling
+
+Use United States English. For example, color rather than colour, and gray rather than grey.
+
+<br/>
+
+### Active voice v. Passive voice
+
+Use [active voice](https://www.grammarly.com/blog/active-vs-passive-voice/). Passive voice decreases readability
+and comprehension. Only use "the voice" on Harkonnen soldiers.
+
+
+### Keep it simple
+
+When possible, use short, simple words. Slang, acronyms, initialisms, abbreviations, and
+[ambiguous contractions ](https://docs.microsoft.com/en-us/style-guide/word-choice/use-contractions)
+(such as there’d, it’ll, and they’d) should be avoided.

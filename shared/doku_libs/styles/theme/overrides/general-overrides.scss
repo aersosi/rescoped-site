@@ -1,0 +1,11 @@
+// dirty bugfix to kill tailwind css-reset for svg
+.navbar__item,
+.footer__item {
+  svg {
+    display: inline-block !important;
+    vertical-align: inherit !important;
+  }
+}
+
+
+

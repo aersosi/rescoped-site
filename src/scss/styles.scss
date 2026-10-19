@@ -1,0 +1,50 @@
+@use 'sass:map';
+
+@forward './fonts';
+@forward './bgDots';
+@forward './articleGrid';
+@forward '~@aersosi/shared/doku_libs/styles/components';
+@use '~@aersosi/shared/doku_libs/styles/theme';
+
+// colors
+:root {
+  @include theme.avo-green;
+}
+
+[data-theme='dark'] {
+}
+
+
+// bugfix for vertical GitHub Link underline
+#section-header p a {
+  &:hover {
+    color: var(--ifm-font-color-base);
+  }
+
+  &:before {
+    inset-block-end: 0.85rem;
+    inset-inline-start: 0;
+    inset-inline-end: 0;
+    block-size: 0.65rem;
+    transform-origin: top left;
+    transform: scaleY(1);
+    z-index: -1;
+  }
+
+  &:hover:before {
+    transform-origin: bottom left;
+    transform: scaleY(0);
+  }
+}
+
+
+
+.grid-container {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+}
+
+.ifm-font-color-base {
+  color: var(--ifm-font-color-base);
+}

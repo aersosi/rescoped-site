@@ -1,0 +1,19 @@
+:root {
+  --BGdots: rgba(0, 0, 0, 14%);
+}
+
+[data-theme='dark'] {
+  --BGdots: rgba(255, 255, 255, 11%);
+}
+
+.bg-dots {
+  position: relative;
+  &:before {
+    content: "";
+    position: absolute;
+    background-image: radial-gradient(var(--BGdots) 8%, transparent 8%);
+    background-size: 24px 24px;
+    inset: 2rem;
+  }
+}
+

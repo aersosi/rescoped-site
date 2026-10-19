@@ -1,0 +1,10 @@
+
+// prevent flickering dropdowns when hover between nav items
+.navbar__items {
+  gap: 0.5rem;
+}
+
+.navbar__logo img {
+  //width: clamp(3.00rem, calc(-3.92rem + 11.11vw), 4.00rem);
+  width: clamp(3.00rem, calc(2.00rem + 1.25vw), 3.50rem);
+}

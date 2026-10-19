@@ -1,0 +1,91 @@
+---
+slug: /datagrid/datagrid-theming-css
+sidebar_label: Datagrid Theming & CSS
+---
+
+# Theming & CSS
+
+The Datagrid only works with material
+
+To import default use:
+
+```scss
+@use '@rescoped/datagrid/theme';
+```
+
+It is themed by default with material-light-blue-500
+
+You can simpy customize it like so:
+
+```scss
+@use '@rescoped/datagrid/theme' with (
+  $primary-color: #c3e700
+);
+```
+
+Of course, you can import your color from somewhere else:
+
+```scss
+@use 'sass:map';
+@use '@angular/material' as mat;
+@use '@rescoped/datagrid/theme' with (
+  $primary-color: map.get(mat.$green-palette, 500)
+);
+```
+
+And you can define colors in more details like so:
+
+```scss
+@use 'sass:map';
+@use '@angular/material' as mat;
+@use '@rescoped/datagrid/theme' with (
+  $primary-color: map.get(mat.$green-palette, 500),
+  $group-color-light: map.get(mat.$blue-grey-palette, 100),
+  $group-color-light-hover: map.get(mat.$blue-grey-palette, 200),
+  $group-color-dark: map.get(mat.$blue-grey-palette, 600),
+  $group-color-dark-hover: map.get(mat.$blue-grey-palette, 700)
+);
+```
+
+---
+
+By default, the CSS looks for body.dark as dark-theme selector. But you can specify your own:
+
+```scss
+@use '@rescoped/datagrid/theme' with (
+  $dark-theme-class: 'whatever[data-theme="dark"]'
+);
+```
+
+---
+
+I also included some helpers for the spacing of each column:
+
+```scss
+@use '@rescoped/datagrid/functions' as f;
+
+$columns: (
+  'itemNumber': '11rem' '14.5rem',
+  'index': '3.5rem',
+  'reportSheet': 'inherit',
+);
+@include f.min-max-width($columns);
+```
+
+You provide key:value pairs. Key = name of each column. Value = width.
+By providing only one value you set a min-width to respective column.
+By providing two values you set the min-width and the max width.
+
+---
+
+Align text to the end or center in a specific column? Hold my beer!
+
+```scss
+.cdk-column-whatever {
+  input,
+  .cdk-default-field {
+    justify-content: flex-end;
+    text-align: end;
+  }
+}
+```

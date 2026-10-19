@@ -1,0 +1,67 @@
+@use "~@aersosi/shared/doku_libs/styles/abstracts/palettes" as pal;
+
+
+.sideScroller {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: start;
+  gap: clamp(1rem, calc(1rem + 1vw), 2rem);
+}
+
+.sideScroller, .tiles {
+  a,
+  a:hover {
+    color: var(--ifm-color-content);
+  }
+}
+
+.sideScroller {
+  overflow-x: scroll;
+  overscroll-behavior-inline: contain;
+  -ms-scroll-snap-type: inline mandatory;
+  scroll-snap-type: inline mandatory;
+  scroll-padding-inline: var(--gap);
+}
+
+.textSwitch {
+  padding-bottom: 3rem;
+  position: relative;
+  font-size: 20px;
+  line-height: 1.5rem;
+  span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 0.15s ease;
+  }
+
+  & :last-child {
+    opacity: 0;
+    color: pal.$avo-pink;
+    font-weight: 700;
+  }
+}
+
+.textSwitch:hover {
+  & :first-child {
+    opacity: 0;
+  }
+  & :last-child {
+    opacity: 1;
+  }
+}
+
+.DatagridImg {
+  transition: transform .15s ease;
+  .overlay {
+    opacity: 0;
+    transition: opacity .15s ease;
+  }
+}
+
+.DatagridImg:hover {
+  transform: scale(103%);
+  .overlay {
+    opacity: 1;
+  }
+}

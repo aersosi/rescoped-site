@@ -1,0 +1,19 @@
+:root {
+  --ifm-menu-link-padding-horizontal: 1.5rem;
+  .markdown {
+    --ifm-h1-vertical-rhythm-top: 1.5;
+    --ifm-h2-vertical-rhythm-top: 1.25;
+    --ifm-h3-vertical-rhythm-top: 1;
+    --ifm-heading-vertical-rhythm-bottom: 0.75;
+  }
+}
+
+.markdown > pre,
+.markdown > ul,
+.markdown > p {
+  margin-bottom: calc(var(--ifm-leading) * 0.75);
+}
+
+.theme-edit-this-page {
+  display: flex;
+}

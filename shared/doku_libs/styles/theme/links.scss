@@ -1,0 +1,61 @@
+@use 'sass:map';
+@use '../abstracts/index' as p;
+
+
+p a {
+  position: relative;
+  display: inline-block;
+  z-index: 0;
+  font-weight: 500;
+
+  &:before {
+    content: '';
+    position: absolute;
+    inset-block-end: 0.1rem;
+    inset-inline-start: 0;
+    inset-inline-end: 0;
+    block-size: 40%;
+    background-color: var(--ifm-color-primary);
+    transform-origin: bottom left;
+    transform: scaleX(1);
+    transition: transform 0.2s ease;
+    z-index: -1;
+  }
+
+  &:hover:before {
+    transform-origin: bottom right;
+    transform: scaleX(0);
+  }
+}
+
+[data-theme="dark"] p a:before {
+  opacity: 0.3;
+}
+
+[data-theme="light"] p a:before {
+  opacity: 0.3;
+}
+
+[data-theme="dark"],
+[data-theme="light"] {
+  p a.opacity-full:before {
+    opacity: 1;
+  }
+}
+
+
+a.underline-white:before {
+  background-color: white;
+}
+
+a.underline-black:before {
+  background-color: black;
+}
+
+a.underline-avo-green:before {
+  background-color: p.$avo-green;
+}
+
+a.underline-avo-pink:before {
+  background-color: p.$avo-pink;
+}

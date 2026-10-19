@@ -1,0 +1,26 @@
+// apply hueShiftAni class to <img/>
+
+.hueShiftAni {
+  position: relative;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  mix-blend-mode: color;
+  animation: hueShiftAni 10s infinite;
+  &:hover {
+    opacity: 0.85;
+  }
+}
+
+@keyframes hueShiftAni {
+  0% {
+    filter: hue-rotate(45deg)
+  }
+
+  50% {
+    filter: hue-rotate(-70deg)
+  }
+
+  100% {
+    filter: hue-rotate(45deg)
+  }
+}

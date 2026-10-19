@@ -1,0 +1,72 @@
+@use 'sass:map';
+@use '../abstracts/index' as p;
+
+
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+@mixin avo-green {
+  --ifm-color-primary-lightest: #{map.get(p.$avo-green-palette, 100)};
+  --ifm-color-primary-lighter: #{map.get(p.$avo-green-palette, 200)};
+  --ifm-color-primary-light: #{map.get(p.$avo-green-palette, 300)};
+  --ifm-color-primary: #{map.get(p.$avo-green-palette, 'green')};
+  --ifm-color-primary-dark: #{map.get(p.$avo-green-palette, 400)};
+  --ifm-color-primary-darker: #{map.get(p.$avo-green-palette, 500)};
+  --ifm-color-primary-darkest: #{map.get(p.$avo-green-palette, 600)};
+}
+
+@mixin avo-pink {
+  --ifm-color-primary-lightest: #{map.get(p.$avo-pink-palette, 300)};
+  --ifm-color-primary-lighter: #{map.get(p.$avo-pink-palette, 400)};
+  --ifm-color-primary-light: #{map.get(p.$avo-pink-palette, 500)};
+  --ifm-color-primary: #{map.get(p.$avo-pink-palette, 'pink')};
+  --ifm-color-primary-dark: #{map.get(p.$avo-pink-palette, 700)};
+  --ifm-color-primary-darker: #{map.get(p.$avo-pink-palette, 800)};
+  --ifm-color-primary-darkest: #{map.get(p.$avo-pink-palette, 900)};
+}
+
+
+// colors
+:root {
+  --ifm-footer-background-color: #{map.get(p.$avo-warm-grey-palette, 50)};
+  --ifm-footer-color: #{map.get(p.$avo-pink-palette, 'pink')};
+  --ifm-color-content: #{p.$avo-dark-blue};
+  --ifm-link-hover-decoration: none;
+  --ifm-navbar-background-color: #{map.get(p.$avo-warm-grey-palette, 50)};
+  --ifm-dropdown-hover-background-color: #{p.$avo-green-12};
+}
+
+[data-theme='dark'] {
+  --ifm-navbar-background-color: #{p.$avo-dark-blue-dark};
+  --ifm-footer-background-color: #{p.$avo-dark-blue-dark};
+  --ifm-color-content: white;
+  --ifm-dropdown-background-color: #{p.$avo-dark-blue-light};
+}
+
+
+:root {
+  --opacity-60: #{p.$black-60};
+  --opacity-48: #{p.$black-48};
+  --opacity-36: #{p.$black-36};
+  --opacity-24: #{p.$black-24};
+  --opacity-16: #{p.$black-16};
+  --opacity-12: #{p.$black-12};
+  --opacity-18: #{p.$black-8};
+  --opacity-6: #{p.$black-6};
+  --opacity-4: #{p.$black-4};
+}
+
+[data-theme='dark'] {
+  --opacity-60: #{p.$white-60};
+  --opacity-48: #{p.$white-48};
+  --opacity-36: #{p.$white-36};
+  --opacity-24: #{p.$white-24};
+  --opacity-16: #{p.$white-16};
+  --opacity-12: #{p.$white-12};
+  --opacity-18: #{p.$white-8};
+  --opacity-6: #{p.$white-6};
+  --opacity-4: #{p.$white-4};
+}

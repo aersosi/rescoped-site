@@ -1,0 +1,32 @@
+@use 'sass:map';
+@use '../abstracts/index' as p;
+
+// colors
+:root {
+  --ifm-footer-background-color: transparent;
+  --ifm-footer-color: var(--ifm-color-primary);
+  --ifm-footer-link-color: var(--ifm-color-content);
+  --ifm-link-hover-decoration: none;
+  --ifm-footer-title-color: #{p.$avo-pink};
+}
+
+.footer__title {
+  font-weight: 500;
+}
+
+.footer__title,
+.footer__item {
+  font-size: var(--fs-base);
+  @media (min-width: 1920px) {
+    font-size: var(--fs-md);
+  }
+}
+
+// override of shitty layout
+.footer__links {
+  margin-bottom: 0;
+  gap: 4rem;
+  .footer__col {
+    margin-bottom: 0;
+  }
+}

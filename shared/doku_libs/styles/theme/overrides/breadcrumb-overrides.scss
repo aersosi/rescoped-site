@@ -1,0 +1,18 @@
+// larger chevron to right icon
+.breadcrumbs__item:not(:last-child):after {
+  height: 0.75rem;
+  width: 0.75rem;
+}
+
+// fix for not well aligned home icon
+.breadcrumbs {
+  display: inline-flex;
+  align-items: center;
+  .breadcrumbs__item {
+    display: inline-flex;
+    align-items: center;
+    a {
+      padding: 0.5rem;
+    }
+  }
+}
