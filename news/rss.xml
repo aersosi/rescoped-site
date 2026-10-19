@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+    <channel>
+        <title>rescoped.io Blog</title>
+        <link>https://rescoped.io/news</link>
+        <description>rescoped.io Blog</description>
+        <lastBuildDate>Mon, 08 Aug 2022 00:00:00 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <language>en</language>
+        <item>
+            <title><![CDATA[Our first rescoped release]]></title>
+            <link>https://rescoped.io/news/first-release</link>
+            <guid>first-release</guid>
+            <pubDate>Mon, 08 Aug 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[Bright Sparkler]]></description>
+            <content:encoded><![CDATA[<p><img loading="lazy" alt="Bright Sparkler" src="/assets/images/avodaq_sparkler-054e80006f667a686c6f9723ecfbaaa6.webp" width="1280" height="480" class="img_ev3q"></p><h1>&nbsp;</h1><p>We – the <a href="https://www.avodaq.com/en/services/software-innovations/" target="_blank" rel="noopener noreferrer">software innovations team</a> of <a href="https://www.avodaq.com/en/" target="_blank" rel="noopener noreferrer">avodaq</a> – are proud to present our first open source release within the rescoped project!</p><p>What is rescoped? We mainly work on applications for business processes and enterprise use cases, that often share
+common challenges, like how to visualize and manipulate data, login mechanisms and alike. The idea to build central
+libraries which we can use and leverage across all our projects came naturally to our minds. When we decide that certain
+features should be reusable, they need to be written in a certain way. And the requirements for our libraries and
+components need to be written in a certain way too. We "rescope" these requirements to help us scale our organization.
+The process to think this way helped us on our journey to deliver large projects with many web-based applications.</p><p>To go open source with meaningful parts of our solutions, helps us to show what we are working on, more transparently.
+rescoped components are MIT-licensed and suitable for leading and experienced engineers and beginners at the same time.</p><h2 class="anchor anchorWithStickyNavbar_LWe7" id="the-first-rescoped-component-datagrid"><strong>The first rescoped component: datagrid</strong><a class="hash-link" href="#the-first-rescoped-component-datagrid" title="Direct link to heading">​</a></h2><p>The rescoped datagrid helps you and your team to build better table-based data sets in your <a href="https://angular.io/" target="_blank" rel="noopener noreferrer">Angular</a> environment.</p><p>Before we started to work on the datagrid we discovered that in the Angular eco-system there are only a handful of data
+grid/data table alternatives. Some of them are open source, some are no longer in development or maintained, others are
+subscription-based for advanced features or commercial use.</p><p>With the rescoped datagrid, you can use all features from the beginning and benefit from our ongoing efforts. We (as
+avodaq) decided not to charge for advanced features or commercial use. The rescoped datagrid is a relevant part of our
+business applications. And if you want to build a data grid, that really meets your needs, you can
+<a href="https://github.com/avodaq/rescoped" target="_blank" rel="noopener noreferrer">contribute here</a>. The datagrid right now is an early and experimental release,
+but you can see what it is already capable of, with our <a href="/skygrid-app/">skygrid demo app</a>.
+Later this year we will publish a roadmap of the datagrid and other rescoped components as well. Stay tuned!</p><h2 class="anchor anchorWithStickyNavbar_LWe7" id="a-quick-history-about-the-datagrid"><strong>A quick history about the datagrid</strong><a class="hash-link" href="#a-quick-history-about-the-datagrid" title="Direct link to heading">​</a></h2><p>When <a href="https://twitter.com/bitcollage" target="_blank" rel="noopener noreferrer">Serkan</a> joined our organization, he brought the open source idea to avodaq. During
+many meetings and project weeks the benefits of open source parts of our work became clearer. With the backing of our
+CEO <a href="https://de.linkedin.com/in/andreas-kusch-b262b7" target="_blank" rel="noopener noreferrer">Andreas</a> we got the necessary resources and the commitment to
+become an open source contributor.</p><p>The first rescoped release is a front-end library, but we also plan to release back-end focused solutions in the future.
+Other components and libraries that we will publish inside the rescoped project will be agnostic. So, it is possible to
+use future parts of rescoped with a different JS-based framework, too!</p><p>Feel free to check out the <a href="https://www.github.com/avodaq/rescoped/" target="_blank" rel="noopener noreferrer">repo on GitHub</a>, the <a href="https://www.rescoped.io/docs/" target="_blank" rel="noopener noreferrer">documentation</a> or contact with us for now via <a href="e-mail" style="unicode-bidi:bidi-override;direction:rtl">moc.qadova@depocser</a>.
+Twitter and Discord are also planned.</p><br><br><p><strong>Thank you for taking some time to read this!</strong></p>]]></content:encoded>
+            <author>aersosi@avodaq.com (Arthur Ersosi)</author>
+            <category>rescoped</category>
+            <category>datagrid</category>
+            <category>avodaq</category>
+        </item>
+    </channel>
+</rss>

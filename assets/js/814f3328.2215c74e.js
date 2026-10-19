@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkrescoped_site=self.webpackChunkrescoped_site||[]).push([[535],{5641:e=>{e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"Our first rescoped release","permalink":"/news/first-release"}]}')}}]);
