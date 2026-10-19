@@ -10,7 +10,7 @@ const config = {
   title: 'rescoped.io',
   tagline: 'Advanced solutions for leading engineers',
   url: 'https://rescoped.io',
-  baseUrl: '/',
+  baseUrl: '/rescoped-site/',
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/fav_re.svg',
