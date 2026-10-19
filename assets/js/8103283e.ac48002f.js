@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkrescoped_site=self.webpackChunkrescoped_site||[]).push([[648],{8927:e=>{e.exports=JSON.parse('{"label":"datagrid","permalink":"/rescoped-site/news/tags/datagrid","allTagsPath":"/rescoped-site/news/tags","count":1}')}}]);

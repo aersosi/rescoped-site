@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkrescoped_site=self.webpackChunkrescoped_site||[]).push([[738],{7320:e=>{e.exports=JSON.parse('{"label":"avodaq","permalink":"/rescoped-site/news/tags/avodaq","allTagsPath":"/rescoped-site/news/tags","count":1}')}}]);

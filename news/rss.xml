@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
     <channel>
         <title>rescoped.io Blog</title>
-        <link>https://rescoped.io/news</link>
+        <link>https://rescoped.io/rescoped-site/news</link>
         <description>rescoped.io Blog</description>
         <lastBuildDate>Mon, 08 Aug 2022 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
@@ -10,11 +10,11 @@
         <language>en</language>
         <item>
             <title><![CDATA[Our first rescoped release]]></title>
-            <link>https://rescoped.io/news/first-release</link>
+            <link>https://rescoped.io/rescoped-site/news/first-release</link>
             <guid>first-release</guid>
             <pubDate>Mon, 08 Aug 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[Bright Sparkler]]></description>
-            <content:encoded><![CDATA[<p><img loading="lazy" alt="Bright Sparkler" src="/assets/images/avodaq_sparkler-054e80006f667a686c6f9723ecfbaaa6.webp" width="1280" height="480" class="img_ev3q"></p><h1>&nbsp;</h1><p>We – the <a href="https://www.avodaq.com/en/services/software-innovations/" target="_blank" rel="noopener noreferrer">software innovations team</a> of <a href="https://www.avodaq.com/en/" target="_blank" rel="noopener noreferrer">avodaq</a> – are proud to present our first open source release within the rescoped project!</p><p>What is rescoped? We mainly work on applications for business processes and enterprise use cases, that often share
+            <content:encoded><![CDATA[<p><img loading="lazy" alt="Bright Sparkler" src="/rescoped-site/assets/images/avodaq_sparkler-054e80006f667a686c6f9723ecfbaaa6.webp" width="1280" height="480" class="img_ev3q"></p><h1>&nbsp;</h1><p>We – the <a href="https://www.avodaq.com/en/services/software-innovations/" target="_blank" rel="noopener noreferrer">software innovations team</a> of <a href="https://www.avodaq.com/en/" target="_blank" rel="noopener noreferrer">avodaq</a> – are proud to present our first open source release within the rescoped project!</p><p>What is rescoped? We mainly work on applications for business processes and enterprise use cases, that often share
 common challenges, like how to visualize and manipulate data, login mechanisms and alike. The idea to build central
 libraries which we can use and leverage across all our projects came naturally to our minds. When we decide that certain
 features should be reusable, they need to be written in a certain way. And the requirements for our libraries and
@@ -26,7 +26,7 @@ subscription-based for advanced features or commercial use.</p><p>With the resco
 avodaq) decided not to charge for advanced features or commercial use. The rescoped datagrid is a relevant part of our
 business applications. And if you want to build a data grid, that really meets your needs, you can
 <a href="https://github.com/avodaq/rescoped" target="_blank" rel="noopener noreferrer">contribute here</a>. The datagrid right now is an early and experimental release,
-but you can see what it is already capable of, with our <a href="/skygrid-app/">skygrid demo app</a>.
+but you can see what it is already capable of, with our <a href="/rescoped-site/skygrid-app/">skygrid demo app</a>.
 Later this year we will publish a roadmap of the datagrid and other rescoped components as well. Stay tuned!</p><h2 class="anchor anchorWithStickyNavbar_LWe7" id="a-quick-history-about-the-datagrid"><strong>A quick history about the datagrid</strong><a class="hash-link" href="#a-quick-history-about-the-datagrid" title="Direct link to heading">​</a></h2><p>When <a href="https://twitter.com/bitcollage" target="_blank" rel="noopener noreferrer">Serkan</a> joined our organization, he brought the open source idea to avodaq. During
 many meetings and project weeks the benefits of open source parts of our work became clearer. With the backing of our
 CEO <a href="https://de.linkedin.com/in/andreas-kusch-b262b7" target="_blank" rel="noopener noreferrer">Andreas</a> we got the necessary resources and the commitment to

@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkrescoped_site=self.webpackChunkrescoped_site||[]).push([[251],{4282:e=>{e.exports=JSON.parse('{"label":"rescoped","permalink":"/news/tags/rescoped","allTagsPath":"/news/tags","count":1}')}}]);
